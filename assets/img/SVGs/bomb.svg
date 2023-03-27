@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 11.933846 11.933846"
+   version="1.1"
+   id="svg135"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="bomb.svg"
+   inkscape:export-filename="..\bomb.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview137"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     guidehicolor="#ff238d"
+     guidehiopacity="0.49803922"
+     inkscape:lockguides="false"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="59.573746"
+     inkscape:cy="51.795572"
+     inkscape:window-width="1440"
+     inkscape:window-height="830"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs132">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 5.9669232 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="11.933846 : 5.9669232 : 1"
+       inkscape:persp3d-origin="5.9669232 : 3.9779488 : 1"
+       id="perspective20280" />
+    <color-profile
+       name="Agfa-:-Swop-Standard"
+       xlink:href="../../../../../../../../../WINDOWS/system32/spool/drivers/color/RSWOP.icm"
+       id="color-profile29933" />
+    <color-profile
+       name="ASUS_UX3402ZA_8086_834C4171_CMDEF"
+       xlink:href="../../../../../../../../../WINDOWS/system32/spool/drivers/color/AsusICM/UX3402ZA_8086_834C4171_CMDEF.icm"
+       id="color-profile29935" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.99;fill:#800000;fill-opacity:1;stroke-width:8.98523"
+       id="rect9777"
+       width="11.935178"
+       height="11.934099"
+       x="-0.00049290253"
+       y="0.00058704976"
+       sodipodi:insensitive="true" />
+    <circle
+       style="opacity:0.99;fill:#808080;fill-opacity:1;stroke-width:7.96004"
+       id="path26744"
+       cx="5.9669232"
+       cy="5.9669232"
+       r="3.5801539" />
+    <path
+       id="rect27586"
+       style="opacity:0.99;fill:#4d4d4d;fill-opacity:1;stroke-width:2.3525"
+       d="M 5.9845059,0.29834616 4.7735386,3.8785001 H 7.1603079 C 6.8757994,3.0126852 6.6163531,2.2230362 6.394481,1.5473883 6.2361677,1.0652899 6.1143221,0.69389763 5.9845059,0.29834616 Z" />
+    <path
+       id="rect27586-4"
+       style="opacity:0.99;fill:#4d4d4d;fill-opacity:1;stroke-width:2.3525"
+       d="M 5.9845059,11.6355 4.7735386,8.0553463 H 7.1603079 C 6.8757994,8.9211622 6.6163531,9.7108108 6.394481,10.386457 6.2361677,10.868556 6.1143221,11.239948 5.9845059,11.6355 Z" />
+    <path
+       id="path27644"
+       style="opacity:0.99;fill:#808080;fill-opacity:1;stroke-width:6.57188"
+       d="m 55.454859,3.875237 11.772553,11.912869 h 0.161294 V 3.8542595 H 55.454859 Z" />
+    <path
+       id="rect27586-6"
+       style="opacity:0.99;fill:#4d4d4d;fill-opacity:1;stroke-width:2.3525"
+       d="M 0.29834616,5.9493406 3.8785001,7.1603079 V 4.7735386 C 3.0126852,5.0580471 2.2230362,5.3174934 1.5473883,5.5393655 1.0652899,5.6976788 0.69389756,5.8195244 0.29834616,5.9493406 Z" />
+    <path
+       id="rect27586-6-8"
+       style="opacity:0.99;fill:#4d4d4d;fill-opacity:1;stroke-width:2.3525"
+       d="M 11.6355,5.9493406 8.0553463,7.1603079 V 4.7735386 c 0.865814,0.2845085 1.655463,0.5439548 2.3311117,0.7658269 0.482098,0.1583133 0.85349,0.2801589 1.249042,0.4099751 z" />
+  </g>
+</svg>
