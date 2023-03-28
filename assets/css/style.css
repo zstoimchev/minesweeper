@@ -1,14 +1,28 @@
 body {
     background-color: aqua;
+    text-align: center;
 }
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/April\ Easter.ttf');
+}
+
 
 h1 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'MyFont', sans-serif;
     font-size: 300%;
-    margin-top: 8%;
+    margin-top: 5%;
     opacity: 1;
     animation: fade-in 2s;
+    color: rgb(167, 0, 0);
+    text-shadow: 1px 1px rgb(255, 0, 0), 2px 2px rgb(255, 82, 82), 1px 1px 5px black;
+    display: inline-block;
+}
+
+h1:hover{
+    color: #EF8B65;
 }
 
 @keyframes fade-in {
@@ -41,7 +55,7 @@ nav,
     width: 250px;
     color: white;
     background-color: red;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 10px black;
     margin: 15px;
 }
 
@@ -105,6 +119,10 @@ td:hover {
 
 .container-item:hover {
     background-color: brown;
+}
+
+.container-item:active {
+    background-color: darkred;
 }
 
 td img {
@@ -189,4 +207,8 @@ footer a {
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+}
+
+nav a {
+    text-shadow: 0.5px 0.5px gainsboro, 1px 1px 7px black;
 }
