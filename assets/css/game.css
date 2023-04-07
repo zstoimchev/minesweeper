@@ -1,0 +1,131 @@
+table {
+    border-collapse: collapse;
+    margin: auto;
+    animation: fade-in 4s;
+    border: 10px solid black;
+}
+
+td {
+    width: 3.5vw;
+    height: 3.5vw;
+    border: 10px solid #555555;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    background-color: #3C3C3C;
+    /* background-color: rgba(0, 183, 76, 1); */
+    ;
+}
+
+td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    /* line-height: 4vw; */
+}
+
+td:hover {
+    background-color: #2B2606;
+}
+
+.gamefield{
+    /* display: flex; */
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    /* justify-content: center; */
+    /* background-color: aquamarine; */
+}
+
+.instructions{
+    position: absolute;
+    background-color: yellow;
+    width: 25.5vw;
+    height: 30vw;
+    left: 2%;  
+    margin-top: 2%;
+    border: 5px solid black;
+    border-radius: 2vw;
+    /* animation: fade-in 35s; */
+}
+
+.statistics{
+    position: absolute;
+    background-color: yellow;
+    width: 25.5vw;
+    height: 30vw;
+    right: 2%;
+    margin-top: 2%;
+    border: 5px solid black;
+    border-radius: 2vw;
+    /* animation: fade-in 35s; */
+}
+
+.instructions h2, .statistics h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6vw;
+}
+
+.instructions ul{
+    text-align: left;
+    font-family:monospace;
+    /* color: wheat; */
+    padding-left: 2vw;
+    font-size: 1.4vw;
+}
+
+.statistics .mytime, .statistics .besttime{
+    background-color: violet;
+    width: 7vw;
+    border-radius: 1vw;
+    padding: 1vw;
+    font-size: 1.2vw;
+    border: 5px solid darkviolet;
+}
+
+#left{
+    float: left;
+    margin-left: 2vw;
+}
+#right{
+    float: right;
+    margin-right: 2vw;
+}
+
+.statistics .reset{
+    position: absolute;
+    width: 80%;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    bottom: 0;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-bottom: 3%;
+    font-size: 1.4vw;
+    border-radius: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1vw;
+    font-weight: bolder;
+    border: 2px solid darkgray;
+}
+
+.statistics .back{
+    position: absolute;
+    width: 80%;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+    bottom: 0;
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-bottom: 21%;
+    font-size: 1.4vw;
+    border-radius: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1vw;
+    font-weight: bolder;
+    border: 2px solid darkgray;
+    
+}

@@ -4,114 +4,171 @@
     <title>Minesweeper</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
 <body>
-    <h1>Minesweeper Online</h1>
+    <h1><a href="index.html">Minesweeper Online</a></h1>
 
-    <table>
-        <tr>
-            <td><a href="#"><img src="assets/img/1s.png" alt="one"></a></td>
-            <td><a href="#"><img src="assets/img/2s.png" alt="two"></a></td>
-            <td><a href="#"><img src="assets/img/3s.png" alt="three"></a></td>
-            <td><a href="#"><img src="assets/img/4s.png" alt="four"></a></td>
-            <td><a href="#"><img src="assets/img/5s.png" alt="five"></a></td>
-            <td><a href="#"><img src="assets/img/6s.png" alt="six"></a></td>
-            <td><a href="#"><img src="assets/img/7s.png" alt="seven"></a></td>
-            <td><a href="#"><img src="assets/img/8s.png" alt="eight"></a></td>
-            <td><a href="#"><img src="assets/img/flag.png" alt="flag"></a></td>
-        </tr>
-        <tr>
-            <td><a href="#"><img src="assets/img/bomb.png" alt="bomb"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-        </tr>
-        <tr>
-        <tr>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-        </tr>
-        <tr>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-        </tr>
-        <tr>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-        </tr>
-        <tr>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-        </tr>
-        <tr>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-        </tr>
-        <tr>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-        </tr>
-        <tr>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
-        </tr>
 
-    </table>
+    <div class="content">
+
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ul>
+                <li>1 means one neighboor mine</li>
+                <li>2 means two neighboor mines</li>
+                <li>3 means three neighboor mines</li>
+                <li>4 means four neighboor mines</li>
+                <li>5 means five neighboor mines</li>
+                <li>6 means six neighboor mines</li>
+                <li>7 means seven neighboor mines</li>
+                <li>8 means eight neighboor mines</li>
+                <li>B means bomb</li>
+                <li>F means flag</li>
+                <li>? means unoppened box</li>
+
+            </ul>
+        </div>
+
+        <div class="gamefield">
+            <table>
+                <tr>
+                    <td><a href="#"><img src="assets/img/one.png" alt="one"></a></td>
+                    <td><a href="#"><img src="assets/img/2s.png" alt="two"></a></td>
+                    <td><a href="#"><img src="assets/img/3s.png" alt="three"></a></td>
+                    <td><a href="#"><img src="assets/img/4s.png" alt="four"></a></td>
+                    <td><a href="#"><img src="assets/img/5s.png" alt="five"></a></td>
+                    <td><a href="#"><img src="assets/img/6s.png" alt="six"></a></td>
+                    <td><a href="#"><img src="assets/img/7s.png" alt="seven"></a></td>
+                    <td><a href="#"><img src="assets/img/8s.png" alt="eight"></a></td>
+                    <td><a href="#"><img src="assets/img/flag.png" alt="flag"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="assets/img/one2.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/bomb.png" alt="bomb"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                    <td><a href="#"><img src="assets/img/questionmark.png" alt="question mark"></a></td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="statistics">
+            <h2>------//------</h2>
+
+            <div class="mytime" id="left">
+                Your time: 00:00:00
+            </div>
+
+            <div class="besttime" id="right">
+                Best Time 00:02:34
+            </div>
+
+            <a href="index.html">
+                <div class="back">
+                    Click to Go back
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="reset">
+                    Click to Reset the Game
+                </div>
+            </a>
+
+
+
+
+        </div>
+
+    </div>
+
+
 
 
 </body>
