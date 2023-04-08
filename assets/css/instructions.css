@@ -1,0 +1,21 @@
+
+.instructionDIV {
+    background-color: #2B2406;
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* border: 1px solid beige; */
+    box-shadow: 0px 0px 20px beige;
+}
+
+.instructionDIV h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.instructionDIV p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: white;
+}

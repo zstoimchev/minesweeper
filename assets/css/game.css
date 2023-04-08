@@ -17,6 +17,12 @@ td {
     ;
 }
 
+td img {
+    height: 100%;
+    width: 100%;
+    vertical-align: bottom;
+}
+
 td a {
     display: block;
     width: 100%;
@@ -42,26 +48,28 @@ td:hover {
 
 .instructions{
     position: absolute;
-    background-color: yellow;
+    background-color: #2B2406;
     width: 25.5vw;
     height: 30vw;
     left: 2%;  
     margin-top: 2%;
-    border: 5px solid black;
+    border: 5px solid #575757;
     border-radius: 2vw;
     /* animation: fade-in 35s; */
+    color: whitesmoke;
 }
 
 .statistics{
     position: absolute;
-    background-color: yellow;
+    background-color: #2B2406;
     width: 25.5vw;
     height: 30vw;
     right: 2%;
     margin-top: 2%;
-    border: 5px solid black;
+    border: 5px solid #575757;
     border-radius: 2vw;
     /* animation: fade-in 35s; */
+    color: whitesmoke;
 }
 
 .instructions h2, .statistics h2{

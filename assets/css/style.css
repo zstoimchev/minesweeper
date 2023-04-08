@@ -1,8 +1,9 @@
 body {
-    /* background-color: aqua; */
     text-align: center;
     background-color: #D2B48C; /* tan/beige */
     margin: 0;
+    background-image: linear-gradient(to bottom right, red, orange, yellow, green);
+    background-attachment: fixed;
 }
 
 @font-face {
@@ -20,6 +21,15 @@ h1 {
     color: rgb(167, 0, 0);
     text-shadow: 1px 1px rgb(255, 0, 0), 2px 2px rgb(255, 82, 82), 1px 1px 5px black;
     display: inline-block;
+}
+
+h1 a{
+    text-decoration: none;
+    color: rgb(167, 0, 0);
+}
+
+h1 a:hover{
+    color: #EF8B65;
 }
 
 h1:hover{
@@ -45,7 +55,11 @@ nav,
     padding: 20px;
 }
 
-.container-item {
+nav a {
+    text-shadow: 0.5px 0.5px gainsboro, 1px 1px 7px black;
+}
+
+.container-item, .dropdown{
     text-align: center;
     padding: 20px;
     font-size: x-large;
@@ -59,34 +73,6 @@ nav,
     margin: 15px;
 }
 
-.instructionDIV {
-    background-color: #2B2406;
-    width: 400px;
-    padding-left: 20px;
-    padding-right: 20px;
-    /* border: 1px solid beige; */
-    box-shadow: 0px 0px 20px beige;
-}
-
-.instructionDIV h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    color: whitesmoke;
-}
-
-.instructionDIV p {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    color: white;
-}
-
-/* .container{
-    background-color: azure;
-    overflow: hidden;
-} */
-
-
-
 .container-item:hover {
     background-color: brown;
 }
@@ -95,11 +81,55 @@ nav,
     background-color: darkred;
 }
 
-td img {
-    height: 100%;
-    width: 100%;
-    vertical-align: bottom;
+
+
+
+.dropdown:hover{
+    background-color: gray;
 }
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    background-color:red;
+}
+
+.content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: large;
+}
+
+
+.dropdown:hover .content{
+    display: block;
+}
+
+
+
+.container-item:hover .cont{
+    display: block;
+}
+
+
+
+
+
+
+
+
+/* the infinite anuimation this is ======================//===================== */
 
 #sett {
     background-color: #8ecae6;
@@ -159,37 +189,4 @@ td img {
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
-}
-
-nav a {
-    text-shadow: 0.5px 0.5px gainsboro, 1px 1px 7px black;
-}
-
-
-
-.cont{
-    display: none;
-    position: absolute;
-    background-color: cyan;
-    left: 0;
-}
-
-.cont li{
-    display: inline-block;
-    text-decoration-line: none;
-    padding: 20px;
-
-}
-
-.container-item:hover .cont{
-    display: block;
-}
-
-h1 a{
-    text-decoration: none;
-    color: rgb(167, 0, 0);
-}
-
-h1 a:hover{
-    color: #EF8B65;
 }
