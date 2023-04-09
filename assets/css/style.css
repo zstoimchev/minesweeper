@@ -59,7 +59,7 @@ nav a {
     text-shadow: 0.5px 0.5px gainsboro, 1px 1px 7px black;
 }
 
-.container-item, .dropdown{
+.container-item{
     text-align: center;
     padding: 20px;
     font-size: x-large;
@@ -81,7 +81,15 @@ nav a {
     background-color: darkred;
 }
 
+.menu{
+    display: inline-block;
+    background-color: red;
+}
 
+.menu button{
+    width: 10em;
+    height: 50px;
+}
 
 
 .dropdown:hover{
@@ -91,19 +99,44 @@ nav a {
 .dropdown{
     position: relative;
     display: inline-block;
-    background-color:red;
+
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    color: white;
+    background-color: red;
+    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 10px black;
+    margin: 15px;
 }
 
-.content{
+.dropdown-content{
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    /* background-color: yellow; */
+    /* min-width: 160px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    top: 65px;
+    margin-left: -7.3em;
+    width: 25em;
+    /* box-shadow: none; */
+
 }
 
-.content a{
+.dropdown-content ul{
+    list-style: none;
+}
+
+.dropdown-content li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.dropdown .dropdown-content a{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -112,13 +145,7 @@ nav a {
 }
 
 
-.dropdown:hover .content{
-    display: block;
-}
-
-
-
-.container-item:hover .cont{
+.dropdown:hover .dropdown-content{
     display: block;
 }
 
