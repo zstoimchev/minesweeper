@@ -5,6 +5,10 @@ table {
     border: 10px solid black;
 }
 
+table:hover{
+    box-shadow: 0px 0px 80px black;
+}
+
 td {
     width: 3.5vw;
     height: 3.5vw;
@@ -35,6 +39,7 @@ td a {
 
 td:hover {
     background-color: #2B2606;
+    /* box-shadow: 0px 0px 50px whitesmoke; */
 }
 
 .gamefield{
@@ -60,7 +65,10 @@ td:hover {
     background-image: linear-gradient(to bottom right, rgb(104, 196, 227), #ff8583);
 
     /* border-image: linear-gradient(to right, #ff0000, #00ff00) 1; */
-    
+}
+
+.instructions:hover, .statistics:hover{
+    box-shadow: 0px 0px 80px black;
 }
 
 .statistics{
@@ -95,6 +103,14 @@ td:hover {
     /* color: wheat; */
     padding-left: 2vw;
     font-size: 1.4vw;
+}
+
+.instructions ul li{
+    margin-top: 10px;
+}
+
+.instructions ul li:hover{
+    color: greenyellow;
 }
 
 .statistics .mytime, .statistics .besttime{
