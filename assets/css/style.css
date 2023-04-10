@@ -46,8 +46,7 @@ h1:hover{
     }
 }
 
-nav,
-.container {
+nav {
     /* background-color: aqua; */
     display: grid;
     justify-content: center;
@@ -55,11 +54,11 @@ nav,
     padding: 20px;
 }
 
-nav a {
+nav a, nav .dropdown {
     text-shadow: 0.5px 0.5px gainsboro, 1px 1px 7px black;
 }
 
-.container-item{
+.container-item, .dropdown{
     text-align: center;
     padding: 20px;
     font-size: x-large;
@@ -71,9 +70,10 @@ nav a {
     background-color: red;
     box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 10px black;
     margin: 15px;
+    border-radius: 10px;
 }
 
-.container-item:hover {
+.container-item:hover, .dropdown:hover {
     background-color: brown;
 }
 
@@ -81,60 +81,61 @@ nav a {
     background-color: darkred;
 }
 
-.menu{
-    display: inline-block;
-    background-color: red;
-}
-
-.menu button{
-    width: 10em;
-    height: 50px;
-}
 
 
-.dropdown:hover{
-    background-color: gray;
-}
+
 
 .dropdown{
     position: relative;
     display: inline-block;
-
-    text-align: center;
-    padding: 20px;
-    font-size: x-large;
-    font-weight: bold;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 250px;
-    color: white;
-    background-color: red;
-    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 10px black;
-    margin: 15px;
 }
 
-.dropdown-content{
+.menu{
+    display: inline-block;
+    /* background-color: red; */
     display: none;
     position: absolute;
-    /* background-color: yellow; */
-    /* min-width: 160px; */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 65px;
-    margin-left: -7.3em;
-    width: 25em;
-    /* box-shadow: none; */
+    top: 68px;
+    width: 180%;
+    margin-left: -13.2em;
 
 }
 
-.dropdown-content ul{
-    list-style: none;
+.menu button{
+    width: 7em;
+    /* margin: 2em; */
+    margin-top: 0.5em;
+    font-size: x-large;
+    padding: 20px;
+    font-weight: bold;
+    background-color: none;
+    border: 3px solid darkgray;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: #4E1E86;
+
+
 }
 
-.dropdown-content li{
+.menu button:hover{
+    background-color: darkgray;
+    box-shadow: 0px 0px 25px black;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .menu{
     display: inline-block;
-    margin-right: 10px;
 }
+
+
+
+
+
+
 
 .dropdown .dropdown-content a{
     color: black;
@@ -143,14 +144,6 @@ nav a {
     display: block;
     font-size: large;
 }
-
-
-.dropdown:hover .dropdown-content{
-    display: block;
-}
-
-
-
 
 
 

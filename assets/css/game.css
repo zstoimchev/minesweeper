@@ -55,8 +55,12 @@ td:hover {
     margin-top: 2%;
     border: 5px solid #575757;
     border-radius: 2vw;
-    /* animation: fade-in 35s; */
-    color: whitesmoke;
+    /* animation: fadein-boxes 6s; */
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(104, 196, 227), #ff8583);
+
+    /* border-image: linear-gradient(to right, #ff0000, #00ff00) 1; */
+    
 }
 
 .statistics{
@@ -68,8 +72,16 @@ td:hover {
     margin-top: 2%;
     border: 5px solid #575757;
     border-radius: 2vw;
-    /* animation: fade-in 35s; */
-    color: whitesmoke;
+    /* animation: fadein-boxes 6s; */
+    color: black;
+    background-image: linear-gradient(to bottom left, rgb(104, 196, 227), #ff8583);
+
+}
+
+@keyframes fadein-boxes{
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .instructions h2, .statistics h2{
@@ -111,13 +123,14 @@ td:hover {
     bottom: 0;
     margin-left: 6%;
     margin-right: 6%;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
     font-size: 1.4vw;
     border-radius: 1vw;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1vw;
     font-weight: bolder;
-    border: 2px solid darkgray;
+    border: 3px solid rgb(198, 229, 255);
+    color: #4E1E86;
 }
 
 .statistics .back{
@@ -128,12 +141,19 @@ td:hover {
     bottom: 0;
     margin-left: 6%;
     margin-right: 6%;
-    margin-bottom: 21%;
+    margin-bottom: 23%;
     font-size: 1.4vw;
     border-radius: 1vw;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1vw;
     font-weight: bolder;
-    border: 2px solid darkgray;
-    
+    border: 3px solid rgb(198, 229, 255);
+    color: #4E1E86;
+
+}
+
+.statistics .back:hover, .statistics .reset:hover{
+    background-color: rgb(198, 229, 255);
+    color: #6c5981;
+    box-shadow: 0px 0px 25px rgb(60, 60, 60);
 }
