@@ -60,7 +60,7 @@ td:hover {
     margin-top: 2%;
     border: 5px solid #575757;
     border-radius: 2vw;
-    /* animation: fadein-boxes 6s; */
+    animation: fadein-boxes 6s;
     color: black;
     background-image: linear-gradient(to bottom right, rgb(104, 196, 227), #ff8583);
 
@@ -80,7 +80,7 @@ td:hover {
     margin-top: 2%;
     border: 5px solid #575757;
     border-radius: 2vw;
-    /* animation: fadein-boxes 6s; */
+    animation: fadein-boxes 6s;
     color: black;
     background-image: linear-gradient(to bottom left, rgb(104, 196, 227), #ff8583);
 
@@ -106,7 +106,7 @@ td:hover {
 }
 
 .instructions ul li{
-    margin-top: 10px;
+    margin-top: 0.6em;
 }
 
 .instructions ul li:hover{
@@ -145,7 +145,7 @@ td:hover {
     font-family: Arial, Helvetica, sans-serif;
     padding: 1vw;
     font-weight: bolder;
-    border: 3px solid rgb(198, 229, 255);
+    border: 0.2em solid rgb(198, 229, 255);
     color: #4E1E86;
 }
 
@@ -163,7 +163,7 @@ td:hover {
     font-family: Arial, Helvetica, sans-serif;
     padding: 1vw;
     font-weight: bolder;
-    border: 3px solid rgb(198, 229, 255);
+    border: 0.2em solid rgb(198, 229, 255);
     color: #4E1E86;
 
 }
@@ -173,3 +173,29 @@ td:hover {
     color: #6c5981;
     box-shadow: 0px 0px 25px rgb(60, 60, 60);
 }
+
+
+
+
+@media screen and (max-width: 480px) {
+    .statistics{
+        display: none;
+    }
+    .instructions{
+        display: none;
+    }
+    table{
+        margin: auto;
+        width: 22em;
+        /* display: grid;
+        justify-content: center; */
+    }
+    .gamefield{
+        display: grid;
+        justify-content: center;
+    }
+    /* td{
+      width: 60px;
+    } */
+
+  }
