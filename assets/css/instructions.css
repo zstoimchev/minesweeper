@@ -1,4 +1,4 @@
-.container{
+.container {
     align-items: center;
 }
 
@@ -12,8 +12,10 @@
     margin: auto;
 }
 
-.instructionDIV:hover{
+.instructionDIV:hover {
     box-shadow: 0px 0px 70px brown;
+    transform: scale(1.2, 1.1);
+
 }
 
 .instructionDIV h2 {
@@ -30,7 +32,8 @@
     line-height: 24px;
 }
 
-.instructionDIV ol li, .instructionDIV ul li{
+.instructionDIV ol li,
+.instructionDIV ul li {
     color: white;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
@@ -40,72 +43,67 @@
 
 }
 
-
-
-a #goback {
-    position: absolute;
+a #goback,
+a #startrandom {
+    position: fixed;
     background-color: aqua;
-    top: 20%;
-    left: 7%;
+    top: 15%;
     padding: 25px;
-    width: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
+    width: 16%;
     color: black;
-    font-size: 1em;
+    font-size: 150%;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    background-color: none;
-    border: 3px solid darkgray;
+    border: 0.2em solid darkgray;
     border-radius: 15px;
     background-color: aliceblue;
     color: #4E1E86;
+}
+
+a #goback {
+    left: 5%;
 }
 
 a #startrandom {
-    position: absolute;
-    background-color: aqua;
-    top: 20%;
-    right: 7%;
-    padding: 20px;
-    width: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    background-color: none;
-    border: 3px solid darkgray;
-    border-radius: 15px;
-    background-color: aliceblue;
-    color: #4E1E86;
+    right: 5%;
 }
 
-a:hover #startrandom, a:hover #goback{
+a:hover #startrandom,
+a:hover #goback {
     background-color: rgb(208, 207, 207);
     box-shadow: 0px 0px 25px black;
     cursor: pointer;
 }
 
+#startrandom:active,
+#goback:active {
+    background-color: #2B2406;
+    transform: scale(1.1, 1.1);
+}
 
+
+@media screen and (max-width: 1140px) {
+
+    #goback,
+    #startrandom {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 480px) {
-    .instructionDIV{
+    .instructionDIV {
         width: 83%;
     }
 
-    .instructionDIV p, .instructionDIV ul li, .instructionDIV ol li{
+    .instructionDIV p,
+    .instructionDIV ul li,
+    .instructionDIV ol li {
         font-size: 1em;
     }
 
-    
-    
-    #startrandom, #goback{
+    #startrandom,
+    #goback {
         position: absolute;
         display: block;
         top: 15%;
@@ -116,16 +114,18 @@ a:hover #startrandom, a:hover #goback{
         border: 1px solid black;
     }
 
-    #goback{
+    #goback {
         left: 1%;
     }
-    
-    #goback a, #startrandom a{
+
+    #goback a,
+    #startrandom a {
         font-size: small;
         padding: 0;
     }
-    
-    #goback, #startrandom{
+
+    #goback,
+    #startrandom {
         display: none;
     }
-  }
+}

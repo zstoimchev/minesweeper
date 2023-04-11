@@ -20,9 +20,11 @@ footer a {
     color: black;
 }
 
-footer a:hover{
+footer a:hover {
     /* text-shadow: 0px 0px 2px white; */
     text-shadow: 0px 0px 1px black;
+    transform: scale(1.1, 1.1);
+
 }
 
 #fixed {
@@ -42,7 +44,7 @@ footer a:hover{
 }
 
 
-.footerdiv{
+.footerdiv {
     /* background-color: #219ebc; */
     bottom: 0;
     left: 0;
@@ -51,7 +53,7 @@ footer a:hover{
     height: 7%;
 }
 
-#hidden{
+#hidden {
     display: none;
     position: fixed;
     left: 0;
@@ -66,36 +68,37 @@ footer a:hover{
     /* darker shade of tan */
     box-shadow: 0px 0px 100px black;
     background-image: linear-gradient(to bottom right, red, orange, yellow);
-
+    opacity: 1;
 }
 
-.footerdiv:hover #hidden{
+.footerdiv:hover #hidden {
     display: block;
     animation: fadin 2s;
+    animation-fill-mode: forwards;
+    /* Keep the last keyframe of the animation */
+    /* the above code nees js to fade away slowly: */
 }
 
-.footerdiv #hidden:hover{
-    animation: fadin 2s;
-}
-
-.footerdiv #hidden::after{
+.footerdiv:not(:hover) #hidden {
     animation: fadout 2s;
 }
 
-@keyframes fadin{
-    from{
+@keyframes fadin {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
 
-@keyframes fadout{
-    from{
+@keyframes fadout {
+    from {
         opacity: 1;
     }
-    to{
+
+    to {
         opacity: 0;
     }
 }
@@ -103,10 +106,12 @@ footer a:hover{
 
 
 @media screen and (max-width: 480px) {
-    footer, #fixed{
+
+    footer,
+    #fixed {
         font-size: 0.8em;
         /* height: 1.5em; */
         padding: 10px;
     }
-    
-  }
+
+}

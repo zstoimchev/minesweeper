@@ -32,8 +32,9 @@ h1 a:hover{
     color: #EF8B65;
 }
 
-h1:hover{
-    color: #EF8B65;
+h1:active{
+    color: chocolate;
+    transform: scale(1.5,1.5);
 }
 
 @keyframes fade-in {
@@ -79,7 +80,9 @@ nav a, nav .dropdown {
 
 .container-item:active {
     background-color: darkred;
+    transform: scale(1.1,1.1);
 }
+
 
 
 
@@ -115,8 +118,6 @@ nav a, nav .dropdown {
     border-radius: 15px;
     background-color: aliceblue;
     color: #4E1E86;
-
-
 }
 
 .menu button:hover{
@@ -125,18 +126,18 @@ nav a, nav .dropdown {
     cursor: pointer;
 }
 
+.menu button:active{
+    transform: scale(1.1,1.1);
+}
+
 .dropdown:hover .dropdown-content{
     display: block;
 }
 
 .dropdown:hover .menu{
     display: inline-block;
-    animation:  fadin 1s;
+    animation:  fadin 0.5s;
 }
-
-
-
-
 
 
 
@@ -147,10 +148,6 @@ nav a, nav .dropdown {
     display: block;
     font-size: large;
 }
-
-
-
-
 
 
 
@@ -220,6 +217,7 @@ nav a, nav .dropdown {
 
 
 
+/* responsiveness for mobile */
 @media screen and (max-width: 480px) {
     .container-item, .dropdown{
         font-size: 1.5em;
