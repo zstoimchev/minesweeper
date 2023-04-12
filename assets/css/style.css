@@ -77,11 +77,12 @@ nav a, nav .dropdown {
 
 .container-item:hover, .dropdown:hover {
     background-color: brown;
+    transform: scale(1.1,1.1);
 }
 
 .container-item:active {
     background-color: darkred;
-    transform: scale(1.1,1.1);
+    transform: scale(1.2,1.2);
 }
 
 
