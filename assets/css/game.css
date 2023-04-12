@@ -7,6 +7,11 @@ table {
 
 table:hover{
     box-shadow: 0px 0px 80px black;
+    transform: scale(1.1);
+}
+
+table:hover h1{
+    opacity: 0.1;
 }
 
 td {
