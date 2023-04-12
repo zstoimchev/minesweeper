@@ -11,7 +11,7 @@ h2 {
     box-shadow: 0px 0px 10px black;
 }
 
-.settingsbox:hover{
+.settingsbox:hover {
     transform: scale(1.1, 1.1);
     box-shadow: 0px 0px 20px black;
 }
@@ -36,17 +36,17 @@ h2 {
     border-radius: 10px;
 }
 
-.settingsbox #test button:hover{
+.settingsbox #test button:hover {
     transform: scale(1.1, 1.1);
     cursor: pointer;
     background-color: darkgray;
 }
 
-.settingsbox #test button:active{
+.settingsbox #test button:active {
     transform: scale(1, 1);
 }
 
-#backtoindexfromsettings{
+#backtoindexfromsettings {
     position: relative;
     font-size: 2.5vw;
     top: 1em;
@@ -59,7 +59,7 @@ h2 {
     border-radius: 10px;
 }
 
-#backtoindexfromsettings:hover{
+#backtoindexfromsettings:hover {
     /* background-color: darkgray; */
     box-shadow: 0px 0px 20px black;
     /* color: lightgray; */
