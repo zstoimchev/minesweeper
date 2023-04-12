@@ -20,11 +20,10 @@ footer a {
     color: black;
 }
 
-footer a:hover {
+footer:hover a {
     /* text-shadow: 0px 0px 2px white; */
     text-shadow: 0px 0px 1px black;
     transform: scale(1.1, 1.1);
-
 }
 
 #fixed {
@@ -41,6 +40,11 @@ footer a:hover {
     /* darker shade of tan */
     box-shadow: 0px 0px 100px black;
     background-image: linear-gradient(to bottom right, red, orange, yellow);
+}
+
+#fixedfootertobottom:hover {
+    /* transform: scale(1.1, 1.1); */
+    font-size: large;
 }
 
 
