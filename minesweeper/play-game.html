@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Minesweeper :: Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png" /> <!-- this is the logo -->
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0"> <!-- this is for scaling -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- this is the general style -->
+    <link rel="stylesheet" href="assets/css/game.css"> <!-- this is the style fot rhis page only -->
+    <link rel="stylesheet" href="assets/css/footer.css"> <!-- this is the footer style -->
+</head>
+
+<body>
+    <!-- some music that later needs to be added -->
+    <embed src="/assets/audio/tic-tac-timer.wav" loop="true" autostart="true" width="2" height="0">
+
+    <h1><a href="index.html">Minesweeper Online</a></h1>
+
+    <div class="content">
+
+        <div class="instructions">
+            <h2>How to play - Tips & Tricks</h2>
+            <ul>
+                <li>To start click on any field</li>
+                <ul>
+                    <li>TIP - start with the corners</li>
+                </ul>
+                <li>Use the numbers to deduce where other mines might be</li>
+                <li>Right-click to flag a square (where you think mine is)</li>
+                <li>Look for patterns in Minesweeper logic</li>
+                <li>Take calculated risks</li>
+                <li>If you lose this round, don't give up. Practise regularly!</li>
+            </ul>
+        </div>
+
+        <div class="gamefield">
+            <table>
+                <tr>
+                    <td id="11"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="12"><a href="#"><img src="assets/img/SVGs/2s.svg" alt="two"></a></td>
+                    <td id="13"><a href="#"><img src="assets/img/SVGs/3s.svg" alt="three"></a></td>
+                    <td id="14"><a href="#"><img src="assets/img/SVGs/4s.svg" alt="four"></a></td>
+                    <td id="15"><a href="#"><img src="assets/img/SVGs/5s.svg" alt="five"></a></td>
+                    <td id="16"><a href="#"><img src="assets/img/SVGs/6s.svg" alt="six"></a></td>
+                    <td id="17"><a href="#"><img src="assets/img/SVGs/7s.svg" alt="seven"></a></td>
+                    <td id="18"><a href="#"><img src="assets/img/SVGs/8s.svg" alt="eight"></a></td>
+                    <td id="19"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="flag"></a></td>
+                </tr>
+                <tr>
+                    <td id="21"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="bomb"></a></td>
+                    <td id="22"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="23"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="24"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="25"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="26"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="27"><a href="#"><img src="assets/img/SVGs/7s.svg" alt="question mark"></a></td>
+                    <td id="28"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="29"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td id="31"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="32"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="33"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="34"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="35"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="36"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="37"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="38"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="39"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td id="41"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="42"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="bomb"></a></td>
+                    <td id="43"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="44"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="45"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="46"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="47"><a href="#"><img src="assets/img/SVGs/5s.svg" alt="question mark"></a></td>
+                    <td id="48"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="bomb"></a></td>
+                    <td id="49"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td id="51"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="52"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="53"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="54"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="55"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="56"><a href="#"><img src="assets/img/SVGs/2s.svg" alt="one"></a></td>
+                    <td id="57"><a href="#"><img src="assets/img/SVGs/3s.svg" alt="one"></a></td>
+                    <td id="58"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="59"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                </tr>
+                <tr>
+                    <td id="61"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="62"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="63"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="64"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="65"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="66"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="bomb"></a></td>
+                    <td id="67"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="68"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="69"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                </tr>
+                <tr>
+                    <td id="71"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="72"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="73"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="74"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="75"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="76"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="77"><a href="#"><img src="assets/img/SVGs/2s.svg" alt="one"></a></td>
+                    <td id="78"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="79"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                </tr>
+                <tr>
+                    <td id="81"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="82"><a href="#"><img src="assets/img/SVGs/8s.svg" alt="question mark"></a></td>
+                    <td id="83"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="84"><a href="#"><img src="assets/img/SVGs/6s.svg" alt="question mark"></a></td>
+                    <td id="85"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="86"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="87"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="88"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="bomb"></a></td>
+                    <td id="89"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                </tr>
+                <tr>
+                    <td id="91"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="92"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="93"><a href="#"><img src="assets/img/SVGs/bomb.svg" alt="question mark"></a></td>
+                    <td id="94"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="95"><a href="#"><img src="assets/img/SVGs/flag.svg" alt="question mark"></a></td>
+                    <td id="96"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="question mark"></a></td>
+                    <td id="97"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="98"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                    <td id="99"><a href="#"><img src="assets/img/SVGs/1s.svg" alt="one"></a></td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="statistics">
+            <h2>Options</h2>
+
+            <div class="mytime" id="left-mytime">
+                Your time: <span id="yourtime">00:00:00</span>
+            </div>
+
+            <div class="besttime" id="right-besttime">
+                Best Time <span id="besttime">00:02:34</span>
+            </div>
+
+            <a href="index.html">
+                <div class="back">
+                    Go back
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="reset">
+                    Restart the Game
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- <audio controls loop>
+        <source src="assets/audio/tic-tac-timer.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio> -->
+
+    <footer id="fixedtobottom">Copyright &copy 2023 <a href="https://zstoimchev.github.io">Zhivko Stoimchev</a>. All
+        rights reserved</footer>
+
+</body>
+
+</html>

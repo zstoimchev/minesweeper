@@ -1,0 +1,168 @@
+.container {
+    align-items: center;
+}
+
+.instructionDIV {
+    background-color: #2B2406;
+    width: 30em;
+    padding: 20px;
+    padding-top: 5px;
+    margin: auto;
+}
+
+.instructionDIV:hover {
+    box-shadow: 0px 0px 70px brown;
+    transform: scale(1.1, 1.1);
+}
+
+.instructionDIV h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.instructionDIV:hover h2 {
+    transform: scale(1.2, 1.2);
+    color: #2E6B1B;
+    text-shadow: 1px 1px 10px black;
+}
+
+.instructionDIV p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: white;
+    font-size: large;
+    line-height: 24px;
+}
+
+.instructionDIV ol li,
+.instructionDIV ul li {
+    color: white;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    font-size: large;
+    line-height: 25px;
+
+}
+
+a #goback,
+a #startrandom {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+    top: 15%;
+    padding: 25px;
+    width: 16%;
+    border: 0.2em solid darkgray;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: #4E1E86;
+}
+
+a #goback {
+    left: 5%;
+}
+
+a #startrandom {
+    right: 5%;
+}
+
+a:hover #startrandom,
+a:hover #goback {
+    background-color: rgb(208, 207, 207);
+    box-shadow: 0px 0px 25px black;
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+a:active #startrandom,
+a:active #goback {
+    background-color: darkgray;
+    transform: scale(1, 1);
+}
+
+#backtoindexbutton {
+    position: relative;
+    bottom: 0.7em;
+    padding: 1vw 3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 2.1vw;
+    text-decoration: none;
+    background-color: aliceblue;
+    color: #4E1E86;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+}
+
+#backtoindexbutton:hover {
+    box-shadow: 0px 0px 20px black;
+    background-color: rgb(251, 174, 174);
+    color: lightslategray;
+}
+
+
+
+
+
+/* responsivnes on screen smaller than 1140px, the buttons are overlaping if not */
+@media screen and (max-width: 1140px) {
+
+    #goback,
+    #startrandom {
+        display: none;
+    }
+}
+
+
+
+
+
+/* scaling for mobile devices */
+@media screen and (max-width: 480px) {
+    .instructionDIV {
+        width: 83%;
+    }
+
+    .instructionDIV p,
+    .instructionDIV ul li,
+    .instructionDIV ol li {
+        font-size: 1em;
+    }
+
+    #startrandom,
+    #goback {
+        position: absolute;
+        display: block;
+        top: 15%;
+        right: 1%;
+        width: 5.4em;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+
+    #goback {
+        left: 1%;
+    }
+
+    #goback a,
+    #startrandom a {
+        font-size: small;
+        padding: 0;
+    }
+
+    #goback,
+    #startrandom {
+        display: none;
+    }
+
+    #backtoindexbutton{
+        font-size: 2em;
+        padding: 10px 30px;
+    }
+
+}

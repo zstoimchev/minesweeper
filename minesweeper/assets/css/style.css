@@ -1,0 +1,179 @@
+body {
+    background-image: linear-gradient(to bottom right, red, orange, yellow, green);
+    background-attachment: fixed;
+    background-color: #D2B48C;
+    margin: 0;
+    text-align: center;
+    animation: fade-in 2s;
+}
+
+
+/* custom font */
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/April\ Easter.ttf');
+}
+
+h1 {
+    text-align: center;
+    font-family: 'MyFont', sans-serif;
+    font-size: 300%;
+    margin-top: 5%;
+    opacity: 1;
+    color: rgb(167, 0, 0);
+    text-shadow: 1px 1px rgb(255, 0, 0), 2px 2px rgb(255, 82, 82), 1px 1px 5px black;
+    display: inline-block;
+    opacity: 1;
+}
+
+h1 a {
+    text-decoration: none;
+    color: rgb(167, 0, 0);
+    opacity: 1;
+}
+
+h1 a:hover {
+    color: #EF8B65;
+}
+
+h1:hover {
+    transform: scale(1.5, 1.5);
+}
+
+h1:active {
+    transform: scale(1.4, 1.4);
+}
+
+h1 a:active {
+    color: chocolate;
+}
+
+/* animation to fade in, opacity from 0 to 1 */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav a,
+nav .dropdown {
+    text-shadow: 0.5px 0.5px gainsboro, 1px 1px 7px black;
+}
+
+.container-item,
+.dropdown {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 6px black;
+    background-color: red;
+    border-radius: 10px;
+    animation: rotate 2s ;
+
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(-360deg); }
+    100% { transform: rotate(0deg) }
+}
+
+.container-item:hover,
+.dropdown:hover {
+    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 10px black;
+    background-color: brown;
+    transform: scale(1.2, 1.2);
+}
+
+.container-item:active {
+    background-color: darkred;
+    transform: scale(1.1, 1.1);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover {
+    cursor: default;
+}
+
+.menu {
+    /* display: inline-block; */
+    display: none;
+    position: absolute;
+    top: 68px;
+    width: 180%;
+    margin-left: -13.2em;
+}
+
+.menu button {
+    width: 7em;
+    /* margin: 2em; */
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 20px;
+    border: 3px solid darkgray;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: #4E1E86;
+}
+
+.menu button:hover {
+    background-color: rgb(208, 207, 207);
+    box-shadow: 0px 0px 25px black;
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+.menu button:active {
+    transform: scale(1, 1);
+}
+
+.dropdown:hover .menu {
+    display: inline-block;
+    animation: fadin 0.5s;
+}
+
+
+
+
+
+/* responsiveness for mobile */
+@media screen and (max-width: 480px) {
+
+    .container-item,
+    .dropdown {
+        justify-content: center;
+        display: grid;
+        padding: 25px;
+        margin-top: 15px;
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 290%;
+    }
+
+    nav {
+        margin-top: 5%;
+    }
+}
