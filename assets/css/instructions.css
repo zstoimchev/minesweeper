@@ -159,4 +159,10 @@ a:active #goback {
     #startrandom {
         display: none;
     }
+
+    #backtoindexbutton{
+        font-size: 2em;
+        padding: 10px 30px;
+    }
+
 }

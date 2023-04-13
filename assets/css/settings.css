@@ -61,3 +61,32 @@ h2 {
     background-color: rgb(251, 174, 174);
     color: lightslategray;
 }
+
+@media screen and (max-width: 480px) {
+    .settingsbox{
+        width: 25em;
+    }
+
+    .settingsbox h2{
+        font-size: 1.5em;
+    }
+
+    #musicdivid {
+        width: 100%;
+        height: 100%;
+        bottom: 2.5vw;
+    }
+    
+    .settingsbox #musicdivid button {
+        padding: 5%;
+        font-size: 4.3vw;
+        width: 20vw;
+        border-radius: 10px;
+    }
+
+    #backtoindexbutton{
+        font-size: 2em;
+        padding: 10px 30px;
+    }
+    
+}

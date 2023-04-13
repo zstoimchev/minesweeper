@@ -1,4 +1,4 @@
-.gamefield{
+.gamefield {
     position: absolute;
     left: 30%;
     right: 30%;
@@ -8,11 +8,34 @@ table {
     border-collapse: collapse;
     margin: auto;
     border: 10px solid black;
+    animation: rotate 5s;
 }
 
-table:hover{
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    25% {
+        transform: rotate(360deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+table:hover {
     box-shadow: 0px 0px 80px black;
     transform: scale(1.1);
+}
+
+table:hover h1 {
+    opacity: 0;
 }
 
 td {
@@ -43,12 +66,12 @@ td a {
 
 td:hover {
     background-color: #2B2606;
-    transform: scale(1.3,1.3);
+    transform: scale(1.3, 1.3);
 }
 
-td:active{
+td:active {
     /* background-color: cadetblue; */
-    transform: scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
 }
 
 
@@ -58,7 +81,8 @@ td:active{
 
 
 
-.instructions, .statistics{
+.instructions,
+.statistics {
     position: absolute;
     background-color: #2B2406;
     width: 25.5vw;
@@ -70,56 +94,65 @@ td:active{
     opacity: 0.2;
 }
 
-.instructions{
+.instructions {
     background-image: linear-gradient(to bottom right, rgb(104, 196, 227), #ff8583);
-    left: 2%;  
+    left: 2%;
 }
 
-.statistics{
+.statistics {
     background-image: linear-gradient(to bottom left, rgb(104, 196, 227), #ff8583);
     right: 2%;
 }
 
-.instructions:hover, .statistics:hover{
+.instructions:hover,
+.statistics:hover {
     box-shadow: 0px 0px 80px black;
     animation: fade-in-game-elements 2s;
     opacity: 1;
 }
 
-@keyframes fade-in-game-elements{
-    from{ opacity: 0.1;}
-    to {opacity: 1;}
+@keyframes fade-in-game-elements {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
-.instructions h2, .statistics h2{
+.instructions h2,
+.statistics h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.6vw;
 }
 
-.instructions:hover h2, .statistics:hover h2{
+.instructions:hover h2,
+.statistics:hover h2 {
     margin-top: -13%;
     margin-bottom: 22%;
     font-size: 180%;
 }
 
-.instructions ul{
+.instructions ul {
     text-align: left;
-    font-family:monospace;
+    font-family: monospace;
     padding-left: 2vw;
     font-size: 1.4vw;
 }
 
-.instructions ul li{
+.instructions ul li {
     margin-top: 0.6em;
 }
 
-.instructions ul li:hover{
+.instructions ul li:hover {
     color: greenyellow;
     cursor: default;
 }
 
-.statistics .mytime, .statistics .besttime{
+.statistics .mytime,
+.statistics .besttime {
     background-color: violet;
     width: 7vw;
     border-radius: 1vw;
@@ -128,20 +161,23 @@ td:active{
     border: 5px solid darkviolet;
 }
 
-#left-mytime{
+#left-mytime {
     float: left;
     margin-left: 2vw;
 }
-#right-besttime{
+
+#right-besttime {
     float: right;
     margin-right: 2vw;
 }
 
-.statistics .mytime:hover, .statistics .besttime:hover{
+.statistics .mytime:hover,
+.statistics .besttime:hover {
     transform: scale(1.2, 1.2);
 }
 
-.statistics .reset, .statistics .back{
+.statistics .reset,
+.statistics .back {
     position: absolute;
     width: 80%;
     background-color: aliceblue;
@@ -157,23 +193,25 @@ td:active{
     color: #4E1E86;
 }
 
-.statistics .reset{
+.statistics .reset {
     margin-bottom: 4%;
 }
 
-.statistics .back{
+.statistics .back {
     margin-bottom: 23%;
 }
 
-.statistics .back:hover, .statistics .reset:hover{
+.statistics .back:hover,
+.statistics .reset:hover {
     background-color: rgb(198, 229, 255);
     color: #6c5981;
     box-shadow: 0px 0px 25px rgb(60, 60, 60);
-    transform: scale(1.1,1.1);
+    transform: scale(1.1, 1.1);
 }
 
-.statistics .back:active, .statistics .reset:active{
-    transform: scale(1,1);
+.statistics .back:active,
+.statistics .reset:active {
+    transform: scale(1, 1);
     background-color: rgb(151, 208, 255);
     border: 0.2em solid rgb(151, 208, 255);
 }
@@ -184,24 +222,47 @@ td:active{
 
 /* scaling for mobile devices */
 @media screen and (max-width: 480px) {
-    .statistics{
+    /* .statistics {
+        display: none;
+    } */
+
+    .instructions {
         display: none;
     }
-    .instructions{
-        display: none;
-    }
-    table{
+
+    table {
         margin: auto;
         width: 22em;
         /* display: grid;
         justify-content: center; */
     }
-    .gamefield{
+
+    .gamefield {
         display: grid;
         justify-content: center;
     }
-    /* td{
-      width: 60px;
-    } */
 
-  }
+    .statistics{
+        bottom: 10%;
+        opacity: 1;
+        left: 20%;
+        width: 60%;
+        height: 30%;
+    }
+
+    .statistics h2{
+        font-size: 1.5em;
+    }
+
+    .statistics .back, .statistics .reset{
+        margin-left: 8%;
+        font-size: 1.2em;
+    }
+
+    .statistics .mytime, .statistics .besttime{
+        font-size: 1em;
+        width: 5em;
+    }
+
+
+}
