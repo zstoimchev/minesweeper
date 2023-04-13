@@ -5,7 +5,6 @@ h2 {
 }
 
 .settingsbox {
-    /* background-color: aqua; */
     margin: auto;
     width: 30vw;
     box-shadow: 0px 0px 10px black;
@@ -16,53 +15,49 @@ h2 {
     box-shadow: 0px 0px 20px black;
 }
 
-#test {
+#musicdivid {
     position: relative;
     width: 50%;
     height: 100%;
-    /* display: grid; */
     justify-content: center;
     margin: auto;
     bottom: 1.7vw;
 }
 
-.settingsbox #test button {
+.settingsbox #musicdivid button {
     display: inline;
     padding: 5%;
-    /* font-size: 130%; */
     font-size: 1.5vw;
     font-weight: bolder;
     width: 7vw;
     border-radius: 10px;
 }
 
-.settingsbox #test button:hover {
+.settingsbox #musicdivid button:hover {
     transform: scale(1.1, 1.1);
     cursor: pointer;
     background-color: darkgray;
 }
 
-.settingsbox #test button:active {
+.settingsbox #musicdivid button:active {
     transform: scale(1, 1);
 }
 
-#backtoindexfromsettings {
+#backtoindexbutton {
     position: relative;
-    font-size: 2.5vw;
+    padding: 1vw 3vw;
     top: 1em;
-    padding: 1vw;
-    font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 2.1vw;
     text-decoration: none;
     color: white;
     box-shadow: 0px 0px 10px black;
     border-radius: 10px;
 }
 
-#backtoindexfromsettings:hover {
-    /* background-color: darkgray; */
+#backtoindexbutton:hover {
     box-shadow: 0px 0px 20px black;
-    /* color: lightgray; */
     background-color: rgb(251, 174, 174);
     color: lightslategray;
 }

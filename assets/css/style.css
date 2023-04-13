@@ -1,13 +1,13 @@
 body {
-    text-align: center;
-    background-color: #D2B48C;
-    /* tan/beige */
-    margin: 0;
     background-image: linear-gradient(to bottom right, red, orange, yellow, green);
     background-attachment: fixed;
+    background-color: #D2B48C;
+    margin: 0;
+    text-align: center;
     animation: fade-in 2s;
 }
 
+/* custom font */
 @font-face {
     font-family: 'MyFont';
     src: url('../fonts/April\ Easter.ttf');
@@ -19,7 +19,6 @@ h1 {
     font-size: 300%;
     margin-top: 5%;
     opacity: 1;
-    animation: fade-in 2s;
     color: rgb(167, 0, 0);
     text-shadow: 1px 1px rgb(255, 0, 0), 2px 2px rgb(255, 82, 82), 1px 1px 5px black;
     display: inline-block;
@@ -36,14 +35,17 @@ h1 a:hover {
 
 h1:hover {
     transform: scale(1.5, 1.5);
-
 }
 
 h1:active {
-    color: chocolate;
     transform: scale(1.4, 1.4);
 }
 
+h1 a:active {
+    color: chocolate;
+}
+
+/* animation to fade in, opacity from 0 to 1 */
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -55,10 +57,8 @@ h1:active {
 }
 
 nav {
-    /* background-color: aqua; */
     display: grid;
     justify-content: center;
-    animation: fade-in 2s;
     padding: 20px;
 }
 
@@ -69,34 +69,31 @@ nav .dropdown {
 
 .container-item,
 .dropdown {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding: 20px;
     font-size: x-large;
     font-weight: bold;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 250px;
     color: white;
-    background-color: red;
-    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 6px black;
+    width: 250px;
+    padding: 20px;
     margin: 15px;
+    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 6px black;
+    background-color: red;
     border-radius: 10px;
 }
 
 .container-item:hover,
 .dropdown:hover {
+    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 10px black;
     background-color: brown;
     transform: scale(1.2, 1.2);
-    box-shadow: 1px 1px darkred, 2px 2px darkmagenta, 1px 1px 10px black;
 }
 
 .container-item:active {
     background-color: darkred;
     transform: scale(1.1, 1.1);
 }
-
-
-
 
 .dropdown {
     position: relative;
@@ -108,14 +105,12 @@ nav .dropdown {
 }
 
 .menu {
-    display: inline-block;
-    /* background-color: red; */
+    /* display: inline-block; */
     display: none;
     position: absolute;
     top: 68px;
     width: 180%;
     margin-left: -13.2em;
-
 }
 
 .menu button {
@@ -123,9 +118,8 @@ nav .dropdown {
     /* margin: 2em; */
     margin-top: 0.5em;
     font-size: 0.8em;
-    padding: 20px;
     font-weight: bold;
-    background-color: none;
+    padding: 20px;
     border: 3px solid darkgray;
     border-radius: 15px;
     background-color: aliceblue;
@@ -135,31 +129,17 @@ nav .dropdown {
 .menu button:hover {
     background-color: rgb(208, 207, 207);
     box-shadow: 0px 0px 25px black;
-    cursor: pointer;
     transform: scale(1.1, 1.1);
+    cursor: pointer;
 }
 
 .menu button:active {
     transform: scale(1, 1);
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropdown:hover .menu {
     display: inline-block;
     animation: fadin 0.5s;
-}
-
-
-
-.dropdown .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: large;
 }
 
 
@@ -171,12 +151,11 @@ nav .dropdown {
 
     .container-item,
     .dropdown {
-        font-size: 1.5em;
-        margin-top: 15px;
-        padding: 25px;
-        /* width: 100%; */
-        display: grid;
         justify-content: center;
+        display: grid;
+        padding: 25px;
+        margin-top: 15px;
+        font-size: 1.5em;
     }
 
     h1 {
