@@ -32,7 +32,7 @@
      guidehiopacity="0.49803922"
      inkscape:lockguides="false"
      inkscape:zoom="2.8284271"
-     inkscape:cx="16.086679"
+     inkscape:cx="46.138718"
      inkscape:cy="53.563339"
      inkscape:window-width="1440"
      inkscape:window-height="878"
@@ -45,11 +45,11 @@
     <color-profile
        name="Agfa-:-Swop-Standard"
        xlink:href="file:///WINDOWS/system32/spool/drivers/color/RSWOP.icm"
-       id="color-profile65677" />
+       id="color-profile373" />
     <color-profile
        name="ASUS_UX3402ZA_8086_834C4171_CMDEF"
        xlink:href="file:///WINDOWS/system32/spool/drivers/color/AsusICM/UX3402ZA_8086_834C4171_CMDEF.icm"
-       id="color-profile65679" />
+       id="color-profile375" />
     <meshgradient
        inkscape:collect="always"
        id="meshgradient50094"
@@ -359,12 +359,13 @@
        x="4.2324381"
        y="10.971014"
        id="text18372"
-       transform="scale(0.94437803,1.058898)"><tspan
+       transform="scale(0.94437803,1.058898)"
+       sodipodi:insensitive="true"><tspan
          sodipodi:role="line"
          id="tspan19468"
-         x="0"
-         y="0"
-         style="stroke-width:8.34139;fill:#fd9d4c;fill-opacity:1">1</tspan></text>
+         x="4.2324381"
+         y="10.971014"
+         style="fill:#fd9d4c;fill-opacity:1;stroke-width:8.34139">1</tspan></text>
   </g>
   <script
      id="mesh_polyfill"
