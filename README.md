@@ -6,4 +6,4 @@ Play <b>Minesweeper</b> in the browser online and test your skills
 <center>
     <hr width="50%">
 <center>
-<p align="center">---> https://zstoimchev.github.io/minesweeper <---</p>
+<p align="center" margin: "auto">---> https://zstoimchev.github.io/minesweeper <---</p>
