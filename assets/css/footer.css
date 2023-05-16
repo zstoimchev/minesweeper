@@ -6,6 +6,7 @@ footer {
     font-weight: bolder;
     box-shadow: 0px 0px 100px black;
     background-image: linear-gradient(to bottom right, red, orange, yellow);
+    font-size: 1.2vw;
 }
 
 #stickytobottom {

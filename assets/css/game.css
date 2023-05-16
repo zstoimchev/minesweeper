@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .gamefield {
     position: absolute;
     left: 30%;
@@ -7,7 +11,7 @@
 table {
     border-collapse: collapse;
     margin: auto;
-    border: 10px solid black;
+    border: 0.7vw solid black;
     animation: rotate 5s;
 }
 
@@ -40,8 +44,10 @@ table:hover h1 {
 
 td {
     width: 3.5vw;
-    height: 3.5vw;
-    border: 10px solid #555555;
+    /* width: 2.9vw; */
+    height: 0;
+    /* padding-top: 3.5vw; */
+    border: 0.6vw solid #555555;
     text-align: center;
     font-size: 2vw;
     font-weight: bold;
@@ -52,6 +58,7 @@ td img {
     height: 100%;
     width: 100%;
     vertical-align: bottom;
+    object-fit: contain;
 }
 
 td a {
@@ -91,7 +98,7 @@ td:active {
     border: 5px solid #575757;
     border-radius: 2vw;
     color: black;
-    opacity: 0.2;
+    opacity: 1;
 }
 
 .instructions {
@@ -107,17 +114,27 @@ td:active {
 .instructions:hover,
 .statistics:hover {
     box-shadow: 0px 0px 80px black;
-    animation: fade-in-game-elements 2s;
+    /* animation: fade-in-game-elements 2s; */
     opacity: 1;
 }
 
 @keyframes fade-in-game-elements {
     from {
-        opacity: 0.1;
+        opacity: 0.2;
     }
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fade-out-game-elements {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.2;
     }
 }
 
@@ -132,7 +149,8 @@ td:active {
 .statistics:hover h2 {
     margin-top: -13%;
     margin-bottom: 22%;
-    font-size: 180%;
+    font-size: 2vw;
+    /* font-size: 180%; */
 }
 
 .instructions ul {
@@ -242,7 +260,7 @@ td:active {
         justify-content: center;
     }
 
-    .statistics{
+    .statistics {
         bottom: 10%;
         opacity: 1;
         left: 20%;
@@ -250,19 +268,45 @@ td:active {
         height: 30%;
     }
 
-    .statistics h2{
+    .statistics h2 {
         font-size: 1.5em;
     }
 
-    .statistics .back, .statistics .reset{
+    .statistics .back,
+    .statistics .reset {
         margin-left: 8%;
         font-size: 1.2em;
     }
 
-    .statistics .mytime, .statistics .besttime{
+    .statistics .mytime,
+    .statistics .besttime {
         font-size: 1em;
-        width: 5    em;
+        width: 5 em;
     }
 
-
 }
+
+
+@media screen and (max-device-width: 2880px) {
+    td {
+        width: 3.5vw;
+    }
+}
+
+
+@media screen and (max-device-width: 1920px) {
+    td {
+        width: 3.3vw;
+    }
+}
+
+
+@media screen and (max-device-width: 1366px) {
+    td {
+        width: 2.9vw;
+    }
+}
+
+
+/* .instructions
+.statistics */

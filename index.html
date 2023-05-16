@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">          <!-- mobile scaling -->
     <link rel="stylesheet" href="assets/css/style.css">                             <!-- general style -->
     <link rel="stylesheet" href="assets/css/footer.css">                            <!-- style for footer only -->
+    <script src="assets/js/gamefield.js"></script>
 </head>
 
 <body>
     <h1><a href="index.html">Minesweeper Online</a></h1>
 
     <nav>
-        <a class="container-item" href="play-game.html">Start</a>
+        <a class="container-item" onclick="generateDifficulty(11)" href="#">Start</a>
 
         <a class="dropdown" href="#">Difficulty
             <div class="menu">
-                <button id="easy">Easy</button>
-                <button id="medium">Medium</button>
-                <button id="hard">Hard</button>
+                <button onclick="generateDifficulty(11)" id="easy">Easy</button>
+                <button onclick="generateDifficulty(18)" id="medium">Medium</button>
+                <button onclick="generateDifficulty(27)" id="hard">Hard</button>
             </div>
         </a>
 

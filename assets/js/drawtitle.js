@@ -1,0 +1,1 @@
+document.write("<h1><a href='index.html'>Minesweeper Online</a></h1>");
