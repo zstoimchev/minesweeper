@@ -8,9 +8,34 @@
     <link rel="stylesheet" href="assets/css/game.css"> <!-- this is the style fot rhis page only -->
     <link rel="stylesheet" href="assets/css/footer.css"> <!-- this is the footer style -->
 
+    <style>
+        .gameOver {
+            border: 3px solid black;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 10vw;
+            z-index: 100;
+            width: 30vw;
+            height: 15vw;
+            font-size: 5vw;
+            text-align: center;
+            background-color: green;
+            color: white;
+
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body>
+    <div id="victory" class='gameOver'> You Win! </div>
+
+    <div id="lost" class='gameOver' style="background-color: red;"> You Lost! </div>
+
+
     <!-- some music that later needs to be added -->
     <embed src="/assets/audio/tic-tac-timer.wav" loop="true" autostart="true" width="2" height="0">
 

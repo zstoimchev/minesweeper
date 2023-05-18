@@ -45,20 +45,58 @@ function generateDifficulty(difficulty) {
     console.log("fer" + bombLocations);
     window.location.href = 'play-game.html?bombLocations=' + bombLocations.map(Number).join(',');
 }
+
 // ===================================================================================================================
 
-function checkGameOver() {
-    var flaggedTilesCount = 0;
+function countFlaggedTiles() {
+    var tiles=0;
     for (i = 1; i <= 9; i++) {
         for (j = 1; j <= 9; j++) {
             let id = i * 10 + j;
-            if (document.getElementById(id).classList.contains("flagged") || document.getElementById(id).classList.contains("questionable")) {
-                flaggedTilesCount++;
+            if (document.getElementById(id).classList.contains("questionable") || document.getElementById(id).classList.contains("flagged")) {
+                tiles++;
             }
         }
     }
-    return flaggedTilesCount;
+    return tiles;
 }
+
+// ===================================================================================================================
+
+function checkGameOverWithFlaggedTiles() {
+    var queryParams = new URLSearchParams(window.location.search);          //
+    var bombLocations = queryParams.get('bombLocations');                   //  this is code at risk
+
+    var correctlyFlaggedTiles = 0;
+    var locations = bombLocations.split(",").length;
+
+    // var locations = bombLocations.length;
+    for (i = 1; i <= 9; i++) {
+        for (j = 1; j <= 9; j++) {
+            let id = i * 10 + j;
+            if (document.getElementById(id).classList.contains("bomb") && (document.getElementById(id).classList.contains("questionable") || document.getElementById(id).classList.contains("flagged"))) {
+                correctlyFlaggedTiles++;
+            }
+        }
+    }
+
+    var actualFlaggedTiles = countFlaggedTiles();
+    if(actualFlaggedTiles == locations){
+        if (correctlyFlaggedTiles == locations) {
+            console.log("win");
+            setScore();
+            drawGameOver("victory");
+        }
+    }
+    console.log(actualFlaggedTiles);
+    console.log(correctlyFlaggedTiles);
+
+}
+
+
+
+
+
 
 // ===================================================================================================================
 
@@ -77,12 +115,12 @@ function checkGameOverWithOppenedTiles() {
             }
         }
     }
-    if (oppenedTilesCount == 81-locations){
+    if (oppenedTilesCount == 81 - locations) {
         console.log("win");
         setScore();
 
     }
-    else{
+    else {
         console.log("play more");
         console.log(bombLocations);                                             //
         console.log(locations);                                             //
@@ -103,6 +141,7 @@ function revealTile(event, id) {
 
     if (element.classList.contains('bomb')) {
         timerStop();
+        drawGameOver("lost");
         for (var ai = 1; ai <= 9; ai++) {
             for (var aj = 1; aj <= 9; aj++) {
                 var IDD = parseInt(ai * 10 + aj);
@@ -118,6 +157,7 @@ function revealTile(event, id) {
     }
     else
         checkMines(id);
+
     checkGameOverWithOppenedTiles();
 }
 
@@ -320,25 +360,10 @@ function flagTile(event, id) {
     var bombLocations = queryParams.get('bombLocations');
     bombLocations = bombLocations.split(',').map(Number);
 
-    const flagCount = checkGameOver();
-    if (bombLocations.length == flagCount) {
-        for (var ai = 1; ai <= 9; ai++)
-            for (var aj = 1; aj <= 9; aj++) {
-                var IDD = parseInt(ai * 10 + aj);
-                document.getElementById(IDD).removeAttribute("onclick");
-                document.getElementById(IDD).removeAttribute('oncontextmenu');
-            }
-    }
-
-
+    checkGameOverWithFlaggedTiles();
 }
 
-
-
 // ===================================================================================================================
-
-
-
 
 function createCookie() {
     // check if there is a cookie for saving the timer value
@@ -360,4 +385,12 @@ function createCookie() {
     }
     // document.score.innerHTML = ""+seconds;
     document.getElementById("besttimescore").innerHTML = "" + cookieTime;
+}
+
+// ===================================================================================================================
+
+function drawGameOver(condId) {
+    document.getElementById(condId).style.display = "block";
+    timerStop();
+
 }
