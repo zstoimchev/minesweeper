@@ -1,3 +1,6 @@
+const audio = new Audio('../assets/audio/tic-tac-timer.wav');
+audio.loop = true;
+
 function createTable() {
     document.write("<table>");
     // let bombLocations = generateBombLocations(11);
@@ -134,6 +137,10 @@ function checkGameOverWithOppenedTiles() {
 function revealTile(event, id) {
     timerStart();
 
+    if (audio.paused)
+        audio.play();
+      
+
     document.getElementById(id).removeAttribute('oncontextmenu');
     event.preventDefault();
     var element = document.getElementById(id);
@@ -142,6 +149,7 @@ function revealTile(event, id) {
     if (element.classList.contains('bomb')) {
         timerStop();
         drawGameOver("lost");
+
         for (var ai = 1; ai <= 9; ai++) {
             for (var aj = 1; aj <= 9; aj++) {
                 var IDD = parseInt(ai * 10 + aj);
@@ -392,5 +400,9 @@ function createCookie() {
 function drawGameOver(condId) {
     document.getElementById(condId).style.display = "block";
     timerStop();
+    audio.pause();
 
+    const audioEnd = new Audio('../assets/audio/' + condId + '.mp3');
+    // audio.loop = true;
+    audioEnd.play();
 }
