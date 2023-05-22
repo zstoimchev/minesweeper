@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css"> <!-- this is the general css -->
     <link rel="stylesheet" href="assets/css/instructions.css"> <!-- this is the style only for this page -->
     <link rel="stylesheet" href="assets/css/footer.css"> <!-- this is the footer style -->
+    <script src="assets/js/gamefield.js"></script>
 </head>
 
 <body>
@@ -98,8 +99,8 @@
     <a href="index.html">
         <div id="goback">Go Back</div>
     </a>
-    <a href="play-game.html">
-        <div id="startrandom">Start Random</div>
+    <a href="#">
+        <div id="startrandom" onclick="generateDifficulty(Math.floor(Math.random() * 19) + 9)">Start Random</div>
     </a>
 
     <footer id="stickytobottom">Copyright &copy 2023 <a href="https://zstoimchev.github.io">Zhivko Stoimchev</a>. All

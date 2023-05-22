@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css"> <!-- this is the general style -->
     <link rel="stylesheet" href="assets/css/game.css"> <!-- this is the style fot rhis page only -->
     <link rel="stylesheet" href="assets/css/footer.css"> <!-- this is the footer style -->
+    <script src="assets/js/keyboardListener.js"></script>
 
     <style>
         .gameOver {
@@ -31,9 +32,9 @@
 </head>
 
 <body>
-    <div id="victory" class='gameOver'> You Win! </div>
+    <div id="victory" class='gameOver'> You Win! <br><span id="restartingText"> Press 'r' to restart </span></div>
 
-    <div id="lost" class='gameOver' style="background-color: red;"> You Lost! </div>
+    <div id="lost" class='gameOver' style="background-color: red;"> You Lost! <br><span id="restartingText"> Press 'r' to restart </span></div>
 
 
     <!-- some music that later needs to be added -->
@@ -78,7 +79,7 @@
                 </div>
             </a>
 
-            <a onclick="generateDifficulty(11)" href="#">
+            <a onclick="window.location.reload()" href="#">
                 <div class="reset">
                     Restart the Game
                 </div>

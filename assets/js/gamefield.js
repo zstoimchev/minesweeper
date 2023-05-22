@@ -1,15 +1,16 @@
+let bombLocations = [];
+
 function createTable() {
     document.write("<table>");
-    // let bombLocations = generateBombLocations(11);
     var queryParams = new URLSearchParams(window.location.search);
-    var bombLocations = queryParams.get('bombLocations');
+    var difficulty = queryParams.get('difficulty');
+    bombLocations = generateBombLocations(difficulty);
 
     for (let i = 1; i <= 9; i++) {
         document.write("<tr>");
         for (let j = 1; j <= 9; j++) {
             let stringID = i * 10 + j;
             let isBomb = bombLocations.includes(stringID) ? 'bomb' : '';
-            // let isBomb = "no";
             document.write('<td id="' + stringID + '" onclick="revealTile(event, ' + stringID + ')" oncontextmenu="flagTile(event, ' + stringID + ')" class="' + isBomb + '"><a href="#"><img src="assets/img/SVGs/unoppened.svg" alt="one"></a></td>');
         }
         document.write("</tr>");
@@ -19,10 +20,10 @@ function createTable() {
 
 // ===================================================================================================================
 
+var bombLocationsInFunction = [];
+var locationNumber = 0;
 
 function generateBombLocations(diff) {
-    var bombLocationsInFunction = [];
-    locationNumber = 0;
     while (locationNumber < diff) {
         let randomLocation = Math.floor(Math.random() * 88) + 11; // Generate random number between 11 and 99
         if (randomLocation % 10 == 0) {
@@ -33,17 +34,14 @@ function generateBombLocations(diff) {
             locationNumber = locationNumber + 1;
         }
     }
-    console.log(bombLocationsInFunction);
     return bombLocationsInFunction;
 }
 
-// var bombLocations = [];
 
 
 function generateDifficulty(difficulty) {
-    bombLocations = generateBombLocations(difficulty);
-    console.log("fer" + bombLocations);
-    window.location.href = 'play-game.html?bombLocations=' + bombLocations.map(Number).join(',');
+    // bombLocations = generateBombLocations(difficulty);
+    window.location.href = 'play-game.html?difficulty=' + difficulty;
 }
 
 // ===================================================================================================================
@@ -64,11 +62,12 @@ function countFlaggedTiles() {
 // ===================================================================================================================
 
 function checkGameOverWithFlaggedTiles() {
-    var queryParams = new URLSearchParams(window.location.search);          //
-    var bombLocations = queryParams.get('bombLocations');                   //  this is code at risk
+    // var queryParams = new URLSearchParams(window.location.search);          //
+    // var bombLocations = queryParams.get('bombLocations');                   //  this is code at risk
 
     var correctlyFlaggedTiles = 0;
-    var locations = bombLocations.split(",").length;
+    // var locations = bombLocations.split(",").length;
+    var locations = bombLocations.join(",").split(",").length;
 
     // var locations = bombLocations.length;
     for (i = 1; i <= 9; i++) {
@@ -83,23 +82,21 @@ function checkGameOverWithFlaggedTiles() {
     var actualFlaggedTiles = countFlaggedTiles();
     if (actualFlaggedTiles == locations) {
         if (correctlyFlaggedTiles == locations) {
-            console.log("win");
             setScore();
             drawGameOver("victory");
         }
     }
-    console.log(actualFlaggedTiles);
-    console.log(correctlyFlaggedTiles);
 
 }
 
 // ===================================================================================================================
 
 function checkGameOverWithOppenedTiles() {
-    var queryParams = new URLSearchParams(window.location.search);          //
-    var bombLocations = queryParams.get('bombLocations');                   //  this is code at risk
+    // var queryParams = new URLSearchParams(window.location.search);          //
+    // var bombLocations = queryParams.get('bombLocations');                   //  this is code at risk
     var oppenedTilesCount = 0;
-    var locations = bombLocations.split(",").length;
+    // var locations = bombLocations.split(",").length;
+    var locations = bombLocations.join(",").split(",").length;
 
     // var locations = bombLocations.length;
     for (i = 1; i <= 9; i++) {
@@ -110,17 +107,9 @@ function checkGameOverWithOppenedTiles() {
             }
         }
     }
-    if (oppenedTilesCount == 81 - locations) {
-        console.log("win");
+    if (oppenedTilesCount == 81-locations) {
         setScore();
-
-    }
-    else {
-        console.log("play more");
-        console.log(bombLocations);                                             //
-        console.log(locations);                                             //
-        console.log(oppenedTilesCount);                                             //
-
+        drawGameOver("victory");
     }
 }
 
@@ -130,7 +119,7 @@ function removeListeners(whatToDo) {
     if (whatToDo == "lost") {
         for (var ai = 1; ai <= 9; ai++) {
             for (var aj = 1; aj <= 9; aj++) {
-                var IDD = parseInt(ai * 10 + aj);
+                var IDD = ai * 10 + aj;
                 document.getElementById(IDD).removeAttribute("onclick");
                 document.getElementById(IDD).removeAttribute('oncontextmenu');
                 if (document.getElementById(IDD).classList.contains('bomb'))
@@ -141,7 +130,7 @@ function removeListeners(whatToDo) {
     else {
         for (var ai = 1; ai <= 9; ai++) {
             for (var aj = 1; aj <= 9; aj++) {
-                var IDD = parseInt(ai * 10 + aj);
+                var IDD = ai * 10 + aj;
                 document.getElementById(IDD).removeAttribute("onclick");
                 document.getElementById(IDD).removeAttribute('oncontextmenu');
             }//endinnerfor
@@ -154,11 +143,9 @@ function removeListeners(whatToDo) {
 function revealTile(event, id) {
     timerStart();
 
-
-
-    document.getElementById(id).removeAttribute('oncontextmenu');
     event.preventDefault();
     var element = document.getElementById(id);
+    element.removeAttribute('oncontextmenu');
     var image = element.querySelector('img');
 
     if (element.classList.contains('bomb')) {
@@ -365,9 +352,10 @@ function flagTile(event, id) {      // this was idea from chatGPT
         image.src = 'assets/img/SVGs/flag.svg';
     }
 
-    var queryParams = new URLSearchParams(window.location.search);
-    var bombLocations = queryParams.get('bombLocations');
-    bombLocations = bombLocations.split(',').map(Number);
+    // var queryParams = new URLSearchParams(window.location.search);
+    // var bombLocations = queryParams.get('bombLocations');
+    // bombLocations = bombLocations.split(',').map(Number);
+    var locations = bombLocations.join(",").split(",").length;
 
     checkGameOverWithFlaggedTiles();
 }
@@ -381,7 +369,6 @@ function createCookie() {
         var expirationDate = new Date(currentYear, 11, 31); // Month is zero-based (0 = January, 11 = December)
         var expires = "expires=" + expirationDate.toUTCString();
         document.cookie = "bestCookieTime=999;" + expires + ";path=/";
-        console.log("there was no cookie");
     }
     var cookies = document.cookie.split("; ");
     var cookieTime = "";
@@ -405,6 +392,5 @@ function drawGameOver(condId) {
     removeListeners(condId);
 
     const audioEnd = new Audio('../assets/audio/' + condId + '.mp3');
-    // audio.loop = true;
     audioEnd.play();
 }
