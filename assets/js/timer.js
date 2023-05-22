@@ -4,6 +4,8 @@ var timerStarted = false;
 var minutes = 0;
 var seconds = 0;
 
+const audio = new Audio('../assets/audio/tic-tac-timer.wav');
+audio.loop = true;
 
 function makeTimerText(secFractions) {
     seconds = Math.floor(secFractions / 10);
@@ -47,6 +49,8 @@ function mouseOutStatistics() {
 function timerStart() {
     if (timerStarted == true)
         return;
+    if (audio.paused)
+        audio.play();
     timerInterval = stimerInterval = setInterval(incrementTimeByOneFraction, 100);
     timerStarted = true;
 
@@ -58,9 +62,6 @@ function timerStart() {
 
     document.getElementsByClassName("statistics")[0].addEventListener("mouseenter", mouseOnStatistics);
     document.getElementsByClassName("statistics")[0].addEventListener("mouseleave", mouseOutStatistics);
-
-
-
 }
 
 
@@ -78,8 +79,6 @@ function timerStop() {
 
     document.getElementsByClassName("statistics")[0].removeEventListener("mouseenter", mouseOnStatistics);
     document.getElementsByClassName("statistics")[0].removeEventListener("mouseleave", mouseOutStatistics);
-
-
 }
 
 
@@ -94,7 +93,6 @@ function setScore() {
             break;
         }
     }
-
     if (seconds < cookieTime) {
         document.cookie = "bestCookieTime=" + seconds + "; expires=Thu, 28 Dec 2023 12:00:00 UTC";
         document.getElementById("besttimescore").innerHTML = "" + seconds;

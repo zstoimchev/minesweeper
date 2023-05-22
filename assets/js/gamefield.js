@@ -1,6 +1,3 @@
-const audio = new Audio('../assets/audio/tic-tac-timer.wav');
-audio.loop = true;
-
 function createTable() {
     document.write("<table>");
     // let bombLocations = generateBombLocations(11);
@@ -52,7 +49,7 @@ function generateDifficulty(difficulty) {
 // ===================================================================================================================
 
 function countFlaggedTiles() {
-    var tiles=0;
+    var tiles = 0;
     for (i = 1; i <= 9; i++) {
         for (j = 1; j <= 9; j++) {
             let id = i * 10 + j;
@@ -84,7 +81,7 @@ function checkGameOverWithFlaggedTiles() {
     }
 
     var actualFlaggedTiles = countFlaggedTiles();
-    if(actualFlaggedTiles == locations){
+    if (actualFlaggedTiles == locations) {
         if (correctlyFlaggedTiles == locations) {
             console.log("win");
             setScore();
@@ -95,11 +92,6 @@ function checkGameOverWithFlaggedTiles() {
     console.log(correctlyFlaggedTiles);
 
 }
-
-
-
-
-
 
 // ===================================================================================================================
 
@@ -134,22 +126,8 @@ function checkGameOverWithOppenedTiles() {
 
 // ===================================================================================================================
 
-function revealTile(event, id) {
-    timerStart();
-
-    if (audio.paused)
-        audio.play();
-      
-
-    document.getElementById(id).removeAttribute('oncontextmenu');
-    event.preventDefault();
-    var element = document.getElementById(id);
-    var image = element.querySelector('img');
-
-    if (element.classList.contains('bomb')) {
-        timerStop();
-        drawGameOver("lost");
-
+function removeListeners(whatToDo) {
+    if (whatToDo == "lost") {
         for (var ai = 1; ai <= 9; ai++) {
             for (var aj = 1; aj <= 9; aj++) {
                 var IDD = parseInt(ai * 10 + aj);
@@ -159,8 +137,33 @@ function revealTile(event, id) {
                     document.getElementById(IDD).querySelector('img').src = 'assets/img/SVGs/bomb.svg';
             }//endinnerfor
         }//endouterfor
+    }
+    else {
+        for (var ai = 1; ai <= 9; ai++) {
+            for (var aj = 1; aj <= 9; aj++) {
+                var IDD = parseInt(ai * 10 + aj);
+                document.getElementById(IDD).removeAttribute("onclick");
+                document.getElementById(IDD).removeAttribute('oncontextmenu');
+            }//endinnerfor
+        }//endouterfor
+    }
+}
+
+// ===================================================================================================================
+
+function revealTile(event, id) {
+    timerStart();
+
+
+
+    document.getElementById(id).removeAttribute('oncontextmenu');
+    event.preventDefault();
+    var element = document.getElementById(id);
+    var image = element.querySelector('img');
+
+    if (element.classList.contains('bomb')) {
+        drawGameOver("lost");
         image.src = 'assets/img/SVGs/bombFill.svg'
-        // window.alert("You lost the game. GAME OVER!");
         return;
     }
     else
@@ -338,9 +341,8 @@ function floodFillTile(id) {
 
 // ===================================================================================================================
 
-
-// this was idea from chatGPT
-function flagTile(event, id) {
+function flagTile(event, id) {      // this was idea from chatGPT
+    timerStart();
     event.preventDefault(); // Prevent the default context menu from appearing
 
     var element = document.getElementById(id);
@@ -362,7 +364,6 @@ function flagTile(event, id) {
         document.getElementById(id).removeAttribute("onclick");
         image.src = 'assets/img/SVGs/flag.svg';
     }
-
 
     var queryParams = new URLSearchParams(window.location.search);
     var bombLocations = queryParams.get('bombLocations');
@@ -401,6 +402,7 @@ function drawGameOver(condId) {
     document.getElementById(condId).style.display = "block";
     timerStop();
     audio.pause();
+    removeListeners(condId);
 
     const audioEnd = new Audio('../assets/audio/' + condId + '.mp3');
     // audio.loop = true;
