@@ -40,7 +40,6 @@ function generateBombLocations(diff) {
 
 
 function generateDifficulty(difficulty) {
-    // bombLocations = generateBombLocations(difficulty);
     window.location.href = 'play-game.html?difficulty=' + difficulty;
 }
 
@@ -62,14 +61,9 @@ function countFlaggedTiles() {
 // ===================================================================================================================
 
 function checkGameOverWithFlaggedTiles() {
-    // var queryParams = new URLSearchParams(window.location.search);          //
-    // var bombLocations = queryParams.get('bombLocations');                   //  this is code at risk
-
     var correctlyFlaggedTiles = 0;
-    // var locations = bombLocations.split(",").length;
     var locations = bombLocations.join(",").split(",").length;
 
-    // var locations = bombLocations.length;
     for (i = 1; i <= 9; i++) {
         for (j = 1; j <= 9; j++) {
             let id = i * 10 + j;
@@ -92,13 +86,9 @@ function checkGameOverWithFlaggedTiles() {
 // ===================================================================================================================
 
 function checkGameOverWithOppenedTiles() {
-    // var queryParams = new URLSearchParams(window.location.search);          //
-    // var bombLocations = queryParams.get('bombLocations');                   //  this is code at risk
     var oppenedTilesCount = 0;
-    // var locations = bombLocations.split(",").length;
     var locations = bombLocations.join(",").split(",").length;
 
-    // var locations = bombLocations.length;
     for (i = 1; i <= 9; i++) {
         for (j = 1; j <= 9; j++) {
             let id = i * 10 + j;
@@ -359,9 +349,6 @@ function flagTile(event, id) {      // this was idea from chatGPT
         image.src = 'assets/img/SVGs/flag.svg';
     }
 
-    // var queryParams = new URLSearchParams(window.location.search);
-    // var bombLocations = queryParams.get('bombLocations');
-    // bombLocations = bombLocations.split(',').map(Number);
     var locations = bombLocations.join(",").split(",").length;
 
     checkGameOverWithFlaggedTiles();
