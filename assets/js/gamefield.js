@@ -107,7 +107,7 @@ function checkGameOverWithOppenedTiles() {
             }
         }
     }
-    if (oppenedTilesCount == 81-locations) {
+    if (oppenedTilesCount == 81 - locations) {
         setScore();
         drawGameOver("victory");
     }
@@ -138,10 +138,17 @@ function removeListeners(whatToDo) {
     }
 }
 
+
+const audio = new Audio('../assets/audio/tic-tac-timer.wav');
+audio.loop = true;
 // ===================================================================================================================
 
 function revealTile(event, id) {
     timerStart();
+
+    if (audio.paused) {
+        audio.play();
+    }
 
     event.preventDefault();
     var element = document.getElementById(id);
@@ -385,12 +392,26 @@ function createCookie() {
 
 // ===================================================================================================================
 
+let audioEnd = new Audio();
 function drawGameOver(condId) {
     document.getElementById(condId).style.display = "block";
     timerStop();
     audio.pause();
     removeListeners(condId);
 
-    const audioEnd = new Audio('../assets/audio/' + condId + '.mp3');
+    // const audioEnd = new Audio('../assets/audio/' + condId + '.mp3');
+    audioEnd.src = '../assets/audio/' + condId + '.mp3';
+    audioEnd.volume = 0.2;
     audioEnd.play();
+}
+
+function toggleAudioOnOff(someParamether) {
+    if (audioEnd) {
+        audioEnd.volume = someParamether;
+    }
+    if (audio) {
+        audio.volume = someParamether;
+    }
+    console.log(someParamether);
+    window.location.href = 'next-page.html?volume=' + someParamether;
 }

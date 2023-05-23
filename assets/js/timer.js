@@ -4,8 +4,7 @@ var timerStarted = false;
 var minutes = 0;
 var seconds = 0;
 
-const audio = new Audio('../assets/audio/tic-tac-timer.wav');
-audio.loop = true;
+
 
 function makeTimerText(secFractions) {
     seconds = Math.floor(secFractions / 10);
@@ -49,8 +48,7 @@ function mouseOutStatistics() {
 function timerStart() {
     if (timerStarted == true)
         return;
-    if (audio.paused)
-        audio.play();
+
     timerInterval = stimerInterval = setInterval(incrementTimeByOneFraction, 100);
     timerStarted = true;
 
