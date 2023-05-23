@@ -6,3 +6,4 @@ function toggleAudioOnOff(volume) {
     localStorage.setItem('myValue', volume);
     console.log(volume);
 }
+// this is nto working
