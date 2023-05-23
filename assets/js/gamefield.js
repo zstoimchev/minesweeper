@@ -388,7 +388,7 @@ function drawGameOver(condId) {
 
     // const audioEnd = new Audio('../assets/audio/' + condId + '.mp3');
     audioEnd.src = '../assets/audio/' + condId + '.mp3';
-    audioEnd.volume = 0.2;
+    // audioEnd.volume = 0.2;
     audioEnd.play();
 }
 
