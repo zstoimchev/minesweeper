@@ -291,7 +291,7 @@ td:active {
 }
 
 
-@media screen and (max-device-width: 2880px) {
+/* @media screen and (max-device-width: 2880px) {
     td {
         width: 3.5vw;
     }
@@ -309,7 +309,7 @@ td:active {
     td {
         width: 2.9vw;
     }
-}
+} */
 
 
 /* .instructions
