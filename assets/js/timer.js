@@ -4,11 +4,9 @@ var timerStarted = false;
 var minutes = 0;
 var seconds = 0;
 
-
-
+// ===================================================================================================================
 function makeTimerText(secFractions) {
     seconds = Math.floor(secFractions / 10);
-
     if (seconds < 10) {
         seconds = "00" + seconds;
     }
@@ -21,30 +19,27 @@ function makeTimerText(secFractions) {
     return seconds;
 }
 
+// ===================================================================================================================
 function incrementTimeByOneFraction() {
-    //Increment the total number of secFractions by one
-    //Display Time
     TotalSecFractions++;
     document.getElementById("timer").innerHTML = makeTimerText(TotalSecFractions);
 }
 
+// ===================================================================================================================
 function mouseOnInstructions() {
     document.getElementsByClassName("instructions")[0].style.animation = "fade-in-game-elements 1s ease-in-out forwards";
 }
-
 function mouseOutInstructions() {
     document.getElementsByClassName("instructions")[0].style.animation = "fade-out-game-elements 1s ease-in-out forwards";
 }
-
 function mouseOnStatistics() {
     document.getElementsByClassName("statistics")[0].style.animation = "fade-in-game-elements 1s ease-in-out forwards";
 }
-
 function mouseOutStatistics() {
     document.getElementsByClassName("statistics")[0].style.animation = "fade-out-game-elements 1s ease-in-out forwards";
 }
 
-
+// ===================================================================================================================
 function timerStart() {
     if (timerStarted == true)
         return;
@@ -62,7 +57,7 @@ function timerStart() {
     document.getElementsByClassName("statistics")[0].addEventListener("mouseleave", mouseOutStatistics);
 }
 
-
+// ===================================================================================================================
 function timerStop() {
     clearInterval(timerInterval);
     timerStarted = false;
@@ -79,10 +74,9 @@ function timerStop() {
     document.getElementsByClassName("statistics")[0].removeEventListener("mouseleave", mouseOutStatistics);
 }
 
-
+// ===================================================================================================================
 function setScore() {
-    // first we get all the cookies
-    var cookies = document.cookie.split("; ");
+    var cookies = document.cookie.split("; ");  // first we get all the cookies
     var cookieTime = "";
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].split("=");
